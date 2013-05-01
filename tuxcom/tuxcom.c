@@ -623,7 +623,7 @@ int main()
 		ey = atoi(env);
 
 	/* open Framebuffer */
-	fb=open("/dev/fb/0", O_RDWR);
+	fb=open("/dev/fb0", O_RDWR);
 	if (fb < 0) {
 		perror("TuxCom <open framebuffer>");
 		exit(1);
