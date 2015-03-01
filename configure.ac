@@ -1,8 +1,9 @@
 AC_INIT(tuxbox-plugins,0.0.1)
-AM_INIT_AUTOMAKE(tuxbox-plugins,0.0.1)
+AM_INIT_AUTOMAKE([0.0.1 nostdinc])
 
 TUXBOX_APPS
 TUXBOX_APPS_DIRECTORY
+TUXBOX_APPS_PKGCONFIG
 
 AC_PROG_CC
 AC_PROG_CXX
@@ -21,10 +22,10 @@ fi
 fi
 
 # needed by enigma/movieplayer
-TUXBOX_APPS_LIB_CONFIG(CURL,curl-config)
+TUXBOX_APPS_LIB_PKGCONFIG(CURL,libcurl)
 
 # needed by tuxmail
-TUXBOX_APPS_LIB_CONFIG(FREETYPE,freetype-config)
+TUXBOX_APPS_LIB_PKGCONFIG(FREETYPE,freetype2)
 TUXBOX_APPS_LIB_PKGCONFIG(PNG,libpng)
 
 # needed by enigma-demo
